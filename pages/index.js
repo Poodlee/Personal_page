@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react'
 import NextLink from 'next/link'
 import {
   Link,
@@ -10,9 +10,8 @@ import {
   List,
   ListItem,
   chakra,
-  Collapse,
 } from '@chakra-ui/react'
-import { ChevronRightIcon, ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
@@ -21,15 +20,12 @@ import Section from '../components/section'
 import { IoLogoGithub, IoMailUnread, IoDocumentAttach, IoSchool } from 'react-icons/io5'
 import Image from 'next/image'
 // import Script from 'next/script'
-import LogoBanner from '../components/logobanner'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
 
 const Home = () => {
-  const [showOldNews, setShowOldNews] = useState(false);
-  const [showMap, setShowMap] = useState(false);
   return (
   <Layout>
     <Container>
@@ -58,7 +54,7 @@ const Home = () => {
             overflow="hidden"
           >
             <ProfileImage
-              src="/images/dj_park.jpeg"
+              src="/images/dj_park.jpg"
               alt="Profile image"
               borderRadius="full"
               width="150"
@@ -73,7 +69,7 @@ const Home = () => {
           About me
         </Heading>
         <Paragraph>
-          I&apos;m a MS/PhD student in the Interdisciplinary Program in Bio Engineering at Seoul National Universitys, advised by Prof.{' '}
+          I&apos;m a MS/PhD student in the Interdisciplinary Program in Bioengineering at Seoul National University, advised by Prof.{' '}
           <Link as={NextLink} href="https://medi.snu.ac.kr" passHref scroll={false}>
             Joo Li Han
           </Link>
@@ -81,70 +77,56 @@ const Home = () => {
         </Paragraph>
         <Box height="0.3em"></Box>
         <Paragraph>
-          My research focuses on developing intelligent medical robotic systems 
-          capable of interpreting real-time physiological vital signs and autonomously 
-          delivering therapeutic interventions.
-
-          Ultimately, I aim to bridge the gap between robust sensing and precise actuation 
-          in healthcare applications. My current interests include implantable medical devices 
-          and targeted drug delivery systems, where intelligent perception and automated 
-          treatment can significantly improve patient outcomes.
-        </Paragraph>
-        <Box height="0.3em"></Box>
-        <Paragraph>
-          I am always open to new opportunities and collaborations! Please feel free to contact me if you are interested in my research.
+          I develop software that interprets biosignals to understand changes
+          in a person&apos;s health and physiological state. By turning complex
+          biological data into meaningful information, I hope to make healthcare
+          more attentive and responsive to individual needs. In the long term,
+          I aim to design and build micro- and nanoscale hardware that connects
+          this understanding to the physical world. Ultimately, my work is driven
+          by a personal hope: to help fill the space left by the absence of those
+          we cherish.
         </Paragraph>
         <Box align="center" my={4}>
           <Button
             as={NextLink}
-            href="/publications"
+            href="/presentations"
             scroll={false}
             rightIcon={<ChevronRightIcon />}
             colorScheme="teal"
           >
-            Publications
+            Presentations
           </Button>
         </Box>
       </Section>
 
 
       <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
-          News
-        </Heading>
+        <Heading as="h3" variant="section-title">News</Heading>
         <BioSection>
-          <BioYear>2025.08</BioYear>
-          2025 BMES (poster).
-        </BioSection>        
-        <BioSection>
-          <BioYear>2025.08</BioYear>
-          Achieved 3rd place at{' '}
-          <Link
-            href="https://datathon.kr/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Korea Clinical Datathon
-          </Link>.
+          <BioYear>2026</BioYear>
+          Received the Best Student Poster Presentation Award at APBEC 2026.
         </BioSection>
-      </Section>
-      <Section delay={0.3}>
-        <Heading
-          as="h3"
-          variant="section-subtitle"
-          cursor="pointer"
-          onClick={() => setShowOldNews(!showOldNews)}
-          display="flex"
-        >
-          Old News
-          {showOldNews ? <ChevronUpIcon /> : <ChevronDownIcon />}
-        </Heading>
-        <Collapse in={showOldNews} animateOpacity>
-          <BioSection>
-            <BioYear>2026.03</BioYear>
-            Began the Integrated M.S.–Ph.D. program (1st semester).
-          </BioSection>
-        </Collapse>
+        <BioSection>
+          <BioYear>2026</BioYear>
+          Oral presentation on interpretable ECG foundation models for early diagnosis of fatal arrhythmias at BMES 2026.
+        </BioSection>
+        <BioSection>
+          <BioYear>2026</BioYear>
+          Presented research on explainable ventricular fibrillation prediction and contributed to a drug delivery poster at the 18th SNU Bioengineering Symposium.
+        </BioSection>
+        <BioSection>
+          <BioYear>2026.03</BioYear>
+          Began the integrated M.S./Ph.D. program at Seoul National University.
+        </BioSection>
+        <BioSection>
+          <BioYear>2025</BioYear>
+          Presented a poster on AI-assisted soft robotic cardiac assistance at BMES 2025.
+        </BioSection>
+        <BioSection>
+          <BioYear>2025</BioYear>
+          Received 3rd place (우수상) at the{' '}
+          <Link href="https://datathon.kr/" target="_blank" rel="noopener noreferrer">Korea Clinical Datathon</Link>.
+        </BioSection>
       </Section>
 
       <Section delay={0.2}>
@@ -153,7 +135,7 @@ const Home = () => {
         </Heading>
         <List>
           <ListItem>
-            <Link href="mailto: ppp6131@snu.ac.kr" target="_blank">
+            <Link href="mailto:ppp6131@snu.ac.kr">
               <Button
                 variant="ghost"
                 colorScheme="teal"
@@ -186,7 +168,7 @@ const Home = () => {
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://scholar.google.com/*" target="_blank">
+            <Link href="https://scholar.google.com/scholar?q=Dongjun+Park+Seoul+National+University" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="ghost"
                 colorScheme="teal"
@@ -204,7 +186,7 @@ const Home = () => {
           Education
         </Heading>
         <BioSection>
-          <BioYear>Starting Mar 2026</BioYear>
+          <BioYear>2026 – present</BioYear>
           M.S./Ph.D., Interdisciplinary Program in Bioengineering
         </BioSection>
 

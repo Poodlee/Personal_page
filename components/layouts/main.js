@@ -31,10 +31,7 @@ const Main = ({ children, router }) => {
       <NavBar path={router.asPath} />
 
       <Container maxW="95ch" pt={14}>
-      <Scene />
-
-      <Box align="center" h="5em">
-      </Box>
+        {router.pathname === '/' && <Scene />}
 
         {children}
         <Analytics />
