@@ -34,8 +34,7 @@ const Home = () => {
         </Box>
         <Box
           flexShrink={0}
-          w={{ base: '110px', md: '150px' }}
-          h={{ base: '110px', md: '150px' }}
+          w={{ base: '125px', md: '190px' }}
           borderColor="whiteAlpha.800"
           borderWidth={2}
           borderStyle="solid"
@@ -44,9 +43,9 @@ const Home = () => {
           <Image
             src="/images/dj_park.jpg"
             alt="Portrait of DongJun Park"
-            width={150}
-            height={150}
-            style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
+            width={900}
+            height={1200}
+            style={{ display: 'block', width: '100%', height: 'auto' }}
           />
         </Box>
       </Box>

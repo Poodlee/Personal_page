@@ -88,7 +88,8 @@ const Navbar = props => {
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/Poodlee/homepage"
+            href="https://github.com/Poodlee/Personal_page"
+            rel="noopener noreferrer"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -126,7 +127,9 @@ const Navbar = props => {
                 </MenuItem>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/Poodlee/homepage"
+                  href="https://github.com/Poodlee/Personal_page"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   View Source
                 </MenuItem>
