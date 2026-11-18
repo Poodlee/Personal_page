@@ -3,7 +3,7 @@
 [https://dongjun.info](https://dongjun.info)
 
 
-[![YouTube thumbnail](./doc/thumb.png)](https://dongjun.info)
+![Personal homepage screenshot](./doc/homepage-screenshot.jpg)
 
 ## Stack
 
