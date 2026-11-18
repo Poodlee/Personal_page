@@ -9,7 +9,6 @@ import {
   Button,
   List,
   ListItem,
-  chakra,
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -21,17 +20,13 @@ import { IoLogoGithub, IoMailUnread, IoDocumentAttach, IoSchool } from 'react-ic
 import Image from 'next/image'
 // import Script from 'next/script'
 
-const ProfileImage = chakra(Image, {
-  shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
-})
-
 const Home = () => {
   return (
   <Layout>
     <Container>
 
-      <Box display={{ lg: 'flex' }}>
-        <Box flexGrow={1}>
+      <Box display="flex" alignItems="flex-start" gap={{ base: 4, md: 6 }}>
+        <Box flex="1" minW={0}>
           <Heading as="h2" variant="page-title">
             DongJun Park
           </Heading>
@@ -39,28 +34,20 @@ const Home = () => {
         </Box>
         <Box
           flexShrink={0}
-          mt={{ base: 4, md: 0 }}
-          ml={{ md: 6 }}
-          textAlign="center"
+          w={{ base: '110px', md: '150px' }}
+          h={{ base: '110px', md: '150px' }}
+          borderColor="whiteAlpha.800"
+          borderWidth={2}
+          borderStyle="solid"
+          overflow="hidden"
         >
-          <Box
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            w="150px"
-            h="150px"
-            display="inline-block"
-            borderRadius="full"
-            overflow="hidden"
-          >
-            <ProfileImage
-              src="/images/dj_park.jpg"
-              alt="Profile image"
-              borderRadius="full"
-              width="150"
-              height="150"
-            />
-          </Box>
+          <Image
+            src="/images/dj_park.jpg"
+            alt="Portrait of DongJun Park"
+            width={150}
+            height={150}
+            style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
+          />
         </Box>
       </Box>
 
