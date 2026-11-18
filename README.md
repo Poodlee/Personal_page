@@ -1,9 +1,7 @@
 # Personal Homepage
 
-[https://dongjun.info](https://dongjun.info)
+[Link(https://dongjun.info)](https://dongjun.info)
 
-
-![Personal homepage screenshot](./doc/homepage-screenshot.jpg)
 
 ## Stack
 
