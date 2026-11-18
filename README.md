@@ -1,6 +1,6 @@
 # Personal Homepage
 
-[Link(https://dongjun.info)](https://dongjun.info)
+[Link](https://dongjun-info.vercel.app/)
 
 
 ## Stack
